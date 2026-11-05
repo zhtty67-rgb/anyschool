@@ -1,0 +1,37 @@
+{
+  "pass": [
+    "1400x900 操作条不遮挡正文(留白足够)",
+    "1400x900 「答对了」存在=y=773",
+    "1400x900 「解析」存在=y=829",
+    "1400x900 「下一题」存在=y=752",
+    "1400x900 「同学」存在=y=982",
+    "1400x900 「下一题」在屏幕内可见=y=752 vh=802",
+    "1400x900 「下一题」未被遮挡=true",
+    "1400x900 滚到底后「解析」可见且不被遮=y=298 barTop=738",
+    "1400x900 滚到底后「同学」可见且不被遮=y=451 barTop=738",
+    "1280x720 操作条不遮挡正文(留白足够)",
+    "1280x720 「答对了」存在=y=773",
+    "1280x720 「解析」存在=y=829",
+    "1280x720 「下一题」存在=y=572",
+    "1280x720 「同学」存在=y=982",
+    "1280x720 「下一题」在屏幕内可见=y=572 vh=622",
+    "1280x720 「下一题」未被遮挡=true",
+    "1280x720 滚到底后「解析」可见且不被遮=y=118 barTop=558",
+    "1280x720 滚到底后「同学」可见且不被遮=y=271 barTop=558",
+    "1024x640 操作条不遮挡正文(留白足够)",
+    "1024x640 「答对了」存在=y=773",
+    "1024x640 「解析」存在=y=829",
+    "1024x640 「下一题」存在=y=492",
+    "1024x640 「同学」存在=y=982",
+    "1024x640 「下一题」在屏幕内可见=y=492 vh=542",
+    "1024x640 「下一题」未被遮挡=true",
+    "1024x640 滚到底后「解析」可见且不被遮=y=38 barTop=478",
+    "1024x640 滚到底后「同学」可见且不被遮=y=191 barTop=478"
+  ],
+  "fail": [],
+  "notes": [
+    "1400x900: {\"barRect\":{\"top\":738,\"h\":64},\"vh\":802,\"items\":{\"答对了\":{\"found\":true,\"y\":773,\"bottom\":794,\"inViewport\":true,\"aboveBar\":false,\"hitSelf\":false},\"解析\":{\"found\":true,\"y\":829,\"bottom\":848,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false},\"下一题\":{\"found\":true,\"y\":752,\"bottom\":789,\"inViewport\":true,\"aboveBar\":false,\"hitSelf\":true},\"同学\":{\"found\":true,\"y\":982,\"bottom\":1003,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false}}}",
+    "1280x720: {\"barRect\":{\"top\":558,\"h\":64},\"vh\":622,\"items\":{\"答对了\":{\"found\":true,\"y\":773,\"bottom\":794,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false},\"解析\":{\"found\":true,\"y\":829,\"bottom\":848,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false},\"下一题\":{\"found\":true,\"y\":572,\"bottom\":609,\"inViewport\":true,\"aboveBar\":false,\"hitSelf\":true},\"同学\":{\"found\":true,\"y\":982,\"bottom\":1003,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false}}}",
+    "1024x640: {\"barRect\":{\"top\":478,\"h\":64},\"vh\":542,\"items\":{\"答对了\":{\"found\":true,\"y\":773,\"bottom\":794,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false},\"解析\":{\"found\":true,\"y\":829,\"bottom\":848,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false},\"下一题\":{\"found\":true,\"y\":492,\"bottom\":529,\"inViewport\":true,\"aboveBar\":false,\"hitSelf\":true},\"同学\":{\"found\":true,\"y\":982,\"bottom\":1003,\"inViewport\":false,\"aboveBar\":false,\"hitSelf\":false}}}"
+  ]
+}

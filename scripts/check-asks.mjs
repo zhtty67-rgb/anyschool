@@ -1,0 +1,15 @@
+import { readFileSync } from 'node:fs';
+const h = readFileSync('data', 'utf8');
+const m = h.match(/window\.__SNAP__ = (\{[\s\S]*?\});<\/script>/);
+const snap = JSON.parse(m[1]);
+const briefs = snap.briefs || {};
+const codes = Object.keys(briefs);
+const withAsks = codes.filter((c) => briefs[c].asks);
+console.log(`briefs 节点数: ${codes.length}`);
+console.log(`带 asks 的节点: ${withAsks.length}`);
+console.log('样例:');
+withAsks.slice(0, 5).forEach((c) => console.log(`  ${c} ${briefs[c].asks}`));
+const covered = snap.tree.modules.flatMap((x) => x.concepts).filter((c) => c.questionCount > 0);
+const missing = covered.filter((c) => !briefs[c.code] || !briefs[c.code].asks);
+console.log(`有题节点 ${covered.length} 个，缺 asks: ${missing.length}`);
+if (missing.length) console.log('  缺: ' + missing.map((c) => c.code).join(', '));

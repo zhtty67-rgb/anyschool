@@ -1,0 +1,26 @@
+# 依赖
+node_modules/
+package-lock.json
+
+# 构建产物以外的临时文件
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 备份文件（不入库）
+*.bak
+*.bak-*
+.bak/
+
+# 浏览器自动化数据（含 cookie，绝不入库）
+.chrome-*/
+chrome-profile*/
+
+# 测试临时目录
+_fresh_test/
+_shippedtest/
+
+# 编辑器
+.vscode/
+.idea/

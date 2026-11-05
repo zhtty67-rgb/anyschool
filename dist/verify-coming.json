@@ -1,0 +1,17 @@
+{
+  "pass": [
+    "折叠区在列表最末尾=index 6/7",
+    "默认收起",
+    "标题居中=center",
+    "标题是块级布局=flex",
+    "有边框使其成块=1px",
+    "上方有分隔线=1px / \"\"",
+    "标题文字含数量=还有 52 个知识点正在准备中（暂时没有题目，先看看吧）",
+    "点击能展开",
+    "展开后显示节点名=52 个"
+  ],
+  "fail": [],
+  "notes": [
+    "{\n \"isLast\": true,\n \"index\": 6,\n \"total\": 7,\n \"summaryText\": \"还有 52 个知识点正在准备中（暂时没有题目，先看看吧）\",\n \"summaryAlign\": \"center\",\n \"summaryDisplay\": \"flex\",\n \"hasBorder\": \"1px\",\n \"comingMarginTop\": \"28px\",\n \"separatorHeight\": \"1px\",\n \"separatorContent\": \"\\\"\\\"\",\n \"isDetailsClosed\": true,\n \"scrollableHeight\": 1445,\n \"comingTop\": 1298\n}"
+  ]
+}

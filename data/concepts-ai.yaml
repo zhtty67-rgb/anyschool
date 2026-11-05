@@ -1,0 +1,633 @@
+# AnySchool 内容包 · 人工智能基础
+# 概念树 v1 —— 从灵枢白箱知识库《人工智能·知识综述》的 20 个骨架点拆解而来
+# 来源：https://github.com/FuRongJun-1999/dsh-memory/blob/main/md_cg/whitebox_kb/knowledge/人工智能·知识综述.md
+# 拆解日期：2026-11-04
+#
+# 拆解原则：
+#   1. 骨架 20 点 → 可判定概念 79 个（3-5 个/骨架点）
+#   2. 每个概念粒度 = 一道题能问清楚的一件事
+#   3. 先修关系只写"学它之前必须会的"，不写"相关"
+#   4. 误解列表来自综述正文的常见混淆点
+#
+# 层级：domain(大类) → module(骨架点) → concept(可判定概念)
+
+meta:
+  pack_id: ai-foundations-v2
+  name: 人工智能基础
+  source: 灵枢白箱知识库 · 人工智能·知识综述（课标骨架 20 知识点）
+  level: E4
+  domain: computer_science
+  concepts_total: 79
+  # 口径说明：本字段为文档声明值，真值以 tree.total 运行时统计为准（当前 79）。
+  # 2026-11-04 由 72 订正为 79，属文档口径订正，非运行时缺陷。
+  modules_total: 20
+  generated_at: '2026-11-04'
+
+modules:
+  # ── 1. AI概述 ──
+  - code: m01-ai-overview
+    name: AI 概述
+    skeleton_ref: AI概述
+    concepts:
+      - code: c0101
+        name: 人工智能定义
+        def: 研究如何让机器完成需要人类智能的任务。
+        misconceptions:
+          - 人工智能等于会说话的机器人
+          - 人工智能等于机器学习
+        prereq: []
+      - code: c0102
+        name: 图灵测试
+        def: 通过对话无法分辨对方是人还是机器，即判定具备智能。
+        misconceptions:
+          - 图灵测试能测出机器的真实理解能力
+        prereq: [c0101]
+      - code: c0103
+        name: 智能体概念
+        def: 能感知环境并采取行动以达成目标的系统。
+        misconceptions:
+          - 智能体必须有实体机器人
+        prereq: [c0101]
+      - code: c0104
+        name: AI 三大流派
+        def: 符号主义（逻辑推理）、联结主义（神经网络）、行为主义（感知-动作）。
+        misconceptions:
+          - 三大流派是先后替代关系，新的淘汰旧的
+        prereq: [c0101]
+
+  # ── 2. 机器学习基础 ──
+  - code: m02-ml-basics
+    name: 机器学习基础
+    skeleton_ref: 机器学习基础
+    concepts:
+      - code: c0201
+        name: 机器学习定义
+        def: 让程序从数据中自动发现规律，而不是人把规则写死。
+        misconceptions:
+          - 机器学习就是数据库查询
+          - 机器学习需要人写全部规则
+        prereq: [c0101]
+      - code: c0202
+        name: 监督学习
+        def: 用带标签的数据学习输入到输出的映射。
+        misconceptions:
+          - 有输入输出就是监督学习
+        prereq: [c0201]
+      - code: c0203
+        name: 无监督学习
+        def: 用无标签数据发现数据内部结构。
+        misconceptions:
+          - 无监督学习没有用，因为不知道对错
+        prereq: [c0201]
+      - code: c0204
+        name: 训练集与测试集
+        def: 用训练集学参数，用测试集评估泛化，两者不能混用。
+        misconceptions:
+          - 在测试集上调参没关系
+          - 数据集越大越不需要划分
+        prereq: [c0201]
+      - code: c0205
+        name: 过拟合
+        def: 模型在训练集表现好、在新数据上表现差。
+        misconceptions:
+          - 训练准确率高就是好模型
+          - 过拟合等于模型太复杂（只是原因之一）
+        prereq: [c0204]
+      - code: c0206
+        name: 泛化能力
+        def: 模型在未见过的数据上表现好的能力。
+        misconceptions:
+          - 泛化能力可以从训练集看出来
+        prereq: [c0205]
+      - code: c0207
+        name: 偏差与方差
+        def: 偏差是模型假设偏离真实规律，方差是模型对数据扰动敏感；二者需权衡。
+        misconceptions:
+          - 偏差和方差可以同时降到零
+        prereq: [c0205, c0206]
+
+  # ── 3. 线性模型 ──
+  - code: m03-linear-models
+    name: 线性模型
+    skeleton_ref: 线性模型
+    concepts:
+      - code: c0301
+        name: 线性回归
+        def: 用一条直线（超平面）拟合输入与连续输出的关系。
+        misconceptions:
+          - 线性回归只能处理一个变量
+        prereq: [c0202]
+      - code: c0302
+        name: 最小二乘法
+        def: 让预测值与真实值残差平方和最小的参数估计方法。
+        misconceptions:
+          - 最小二乘对所有误差类型都合适
+        prereq: [c0301]
+      - code: c0303
+        name: 逻辑回归
+        def: 用 sigmoid 把线性输出压到 0-1，做二分类。
+        misconceptions:
+          - 逻辑回归是用来做回归的
+          - 逻辑回归输出的是类别而不是概率
+        prereq: [c0301]
+      - code: c0304
+        name: 梯度下降
+        def: 沿损失函数梯度反方向迭代更新参数，逐步降低损失。
+        misconceptions:
+          - 梯度下降一定能找到全局最优
+          - 学习率越大收敛越快
+        prereq: [c0302]
+      - code: c0305
+        name: 特征工程
+        def: 人工构造、筛选、变换特征以提升模型效果。
+        misconceptions:
+          - 深度学习时代特征工程没用了
+        prereq: [c0301]
+
+  # ── 4. 神经网络 ──
+  - code: m04-neural-networks
+    name: 神经网络
+    skeleton_ref: 神经网络
+    concepts:
+      - code: c0401
+        name: 感知机
+        def: 最早的线性分类器，输入加权求和后过阈值输出。
+        misconceptions:
+          - 感知机能解决异或问题
+        prereq: [c0303]
+      - code: c0402
+        name: 多层感知机 MLP
+        def: 多层感知机由输入层、隐藏层、输出层堆叠而成，能拟合非线性关系。
+        misconceptions:
+          - 层数越多效果一定越好
+        prereq: [c0401]
+      - code: c0403
+        name: 激活函数
+        def: 给神经元引入非线性，常见 ReLU、sigmoid。
+        misconceptions:
+          - 激活函数可有可无
+          - 所有激活函数效果一样
+        prereq: [c0402]
+      - code: c0404
+        name: 损失函数
+        def: 衡量预测与真实差距的标量函数，训练的目标就是最小化它。
+        misconceptions:
+          - 损失函数越小说明模型越好（还要看泛化）
+        prereq: [c0402]
+      - code: c0405
+        name: 反向传播
+        def: 用链式法则从输出层往回算每个参数的梯度。
+        misconceptions:
+          - 反向传播是一种优化算法（它只算梯度）
+          - 反向传播保证收敛
+        prereq: [c0404, c0304]
+
+  # ── 5. 深度学习 ──
+  - code: m05-deep-learning
+    name: 深度学习
+    skeleton_ref: 深度学习
+    concepts:
+      - code: c0501
+        name: 深度学习定义
+        def: 用多层神经网络自动学习分层特征表示的机器学习分支。
+        misconceptions:
+          - 深度学习就是神经网络换个名字
+        prereq: [c0402]
+      - code: c0502
+        name: CNN 卷积网络
+        def: 用卷积核在图像上滑动提取局部特征，权重共享大幅减少参数。
+        misconceptions:
+          - 卷积核是随机生成的
+          - CNN 只能用于图像
+        prereq: [c0501]
+      - code: c0503
+        name: RNN 与 LSTM
+        def: 带循环连接的序列模型；LSTM 用门控缓解长依赖遗忘。
+        misconceptions:
+          - RNN 能完美记住任意长序列
+        prereq: [c0501]
+      - code: c0504
+        name: Dropout 正则化
+        def: 训练时随机丢弃部分神经元，抑制过拟合。
+        misconceptions:
+          - Dropout 在推理时也要开启
+        prereq: [c0205, c0501]
+      - code: c0505
+        name: 批归一化
+        def: 对每层输入做归一化，加速训练并稳定收敛。
+        misconceptions:
+          - 批归一化等同于数据标准化（作用位置不同）
+        prereq: [c0501]
+
+  # ── 6. 支持向量机 ──
+  - code: m06-svm
+    name: 支持向量机
+    skeleton_ref: 支持向量机
+    concepts:
+      - code: c0601
+        name: 最大间隔超平面
+        def: 在能分开两类样本的超平面中，选间隔最大的那个。
+        misconceptions:
+          - 任意一个能分开的超平面都一样好
+        prereq: [c0303]
+      - code: c0602
+        name: 核技巧
+        def: 用核函数隐式计算高维内积，把线性不可分变成可分。
+        misconceptions:
+          - 核函数真的把数据映射到高维再计算
+        prereq: [c0601]
+      - code: c0603
+        name: 软间隔
+        def: 允许少量样本违反间隔约束，换取更好的泛化。
+        misconceptions:
+          - SVM 必须完美分开所有样本
+        prereq: [c0601, c0205]
+
+  # ── 7. 决策树与集成 ──
+  - code: m07-trees-ensembles
+    name: 决策树集成
+    skeleton_ref: 决策树集成
+    concepts:
+      - code: c0701
+        name: 决策树
+        def: 按特征逐层划分样本的树形模型，可解释性强。
+        misconceptions:
+          - 决策树越深越准
+        prereq: [c0202]
+      - code: c0702
+        name: 信息增益与基尼系数
+        def: 衡量一次划分让数据纯度提升了多少，决定树怎么长。
+        misconceptions:
+          - 信息增益和基尼系数结果一定不同
+        prereq: [c0701]
+      - code: c0703
+        name: Bagging 与随机森林
+        def: 并行训练多棵树再投票，靠降低方差提升稳定性。
+        misconceptions:
+          - 随机森林是 Boosting 的一种
+        prereq: [c0701]
+      - code: c0704
+        name: Boosting
+        def: 串行训练弱学习器，每轮针对前一轮的错，靠降低偏差提升精度（AdaBoost、GBDT、XGBoost）。
+        misconceptions:
+          - Bagging 和 Boosting 可以互换
+        prereq: [c0703]
+
+  # ── 8. 聚类与降维 ──
+  - code: m08-clustering
+    name: 聚类降维
+    skeleton_ref: 聚类降维
+    concepts:
+      - code: c0801
+        name: K-means
+        def: 迭代地把样本分到最近的 K 个中心，最小化簇内距离。
+        misconceptions:
+          - K 值可以自动确定
+          - K-means 能发现任意形状的簇
+        prereq: [c0203]
+      - code: c0802
+        name: 层次聚类
+        def: 按距离逐层合并或分裂，形成树状聚类结构。
+        misconceptions:
+          - 层次聚类比 K-means 快
+        prereq: [c0801]
+      - code: c0803
+        name: DBSCAN
+        def: 基于密度连接找出任意形状的簇，并标记噪声点。
+        misconceptions:
+          - DBSCAN 需要预先指定簇数
+        prereq: [c0801]
+      - code: c0804
+        name: PCA 主成分分析
+        def: 找方差最大的正交方向，把高维数据投影到低维。
+        misconceptions:
+          - PCA 能提升分类准确率（它只是降维与去相关）
+          - 降维后信息完全没损失
+        prereq: [c0203]
+
+  # ── 9. 强化学习 ──
+  - code: m09-rl
+    name: 强化学习
+    skeleton_ref: 强化学习
+    concepts:
+      - code: c0901
+        name: 强化学习定义
+        def: 智能体通过与环境交互、依据奖励信号调整策略。
+        misconceptions:
+          - 强化学习等同于监督学习
+          - 奖励越多越好（稀疏奖励反而更难学）
+        prereq: [c0103]
+      - code: c0902
+        name: 马尔可夫决策过程
+        def: 用状态、动作、转移概率、奖励、折扣因子刻画序贯决策。
+        misconceptions:
+          - MDP 要求环境完全可观测
+        prereq: [c0901]
+      - code: c0903
+        name: Q-learning
+        def: 学习状态-动作价值函数 Q(s,a)，据此选动作。
+        misconceptions:
+          - Q-learning 需要知道环境模型
+        prereq: [c0902]
+      - code: c0904
+        name: 策略梯度
+        def: 直接对策略参数做梯度上升，优化期望回报。
+        misconceptions:
+          - 策略梯度一定比 Q-learning 好
+        prereq: [c0902, c0304]
+      - code: c0905
+        name: 深度强化学习
+        def: 用神经网络近似价值或策略（DQN、PPO）。
+        misconceptions:
+          - 深度强化学习在任何任务上都优于传统 RL
+        prereq: [c0903, c0904, c0501]
+
+  # ── 10. 大语言模型 ──
+  - code: m10-llm
+    name: 大语言模型
+    skeleton_ref: 大语言模型
+    concepts:
+      - code: c1001
+        name: 语言模型
+        def: 给一段文本估计下一个词的概率分布。
+        misconceptions:
+          - 语言模型理解语言的含义（它建模的是概率）
+        prereq: [c0201]
+      - code: c1002
+        name: Transformer
+        def: 完全基于注意力机制、可并行训练的序列建模架构。
+        misconceptions:
+          - Transformer 比 RNN 慢
+        prereq: [c0503]
+      - code: c1003
+        name: 自注意力
+        def: 让每个位置按相关性加权聚合全序列信息，权重由 Query-Key 计算。
+        misconceptions:
+          - 注意力就是给每个词加权重（忽略了 QKV 机制）
+        prereq: [c1002]
+      - code: c1004
+        name: 预训练
+        def: 在海量无标注文本上先学通用语言能力。
+        misconceptions:
+          - 预训练就等于训练完了
+        prereq: [c1001, c1002]
+      - code: c1005
+        name: 指令微调
+        def: 用指令-回答样本让预训练模型学会按指令做事。
+        misconceptions:
+          - 微调需要和预训练一样大的数据
+        prereq: [c1004]
+      - code: c1006
+        name: RLHF
+        def: 用人类偏好训练奖励模型，再用强化学习对齐输出。
+        misconceptions:
+          - RLHF 提升了模型的事实准确率（它主要对齐偏好）
+        prereq: [c1005, c0905]
+
+  # ── 11. 生成模型 ──
+  - code: m11-generative
+    name: 生成模型
+    skeleton_ref: 生成模型
+    concepts:
+      - code: c1101
+        name: 生成模型定义
+        def: 学习数据分布并采样出新的、类似真实数据样本的模型。
+        misconceptions:
+          - 生成模型只能生成图像
+        prereq: [c0201]
+      - code: c1102
+        name: GAN
+        def: 生成器与判别器对抗训练，生成器学着骗过判别器。
+        misconceptions:
+          - GAN 训练一定稳定
+          - 判别器越强越好（会失衡）
+        prereq: [c1101, c0402]
+      - code: c1103
+        name: VAE 变分自编码器
+        def: 用编码器把数据压到潜空间分布，再解码重建。
+        misconceptions:
+          - VAE 生成的一定比 GAN 清晰
+        prereq: [c1101]
+      - code: c1104
+        name: 扩散模型
+        def: 学从噪声逐步去噪还原数据的过程，采样质量高。
+        misconceptions:
+          - 扩散模型是一次生成完成的
+        prereq: [c1101]
+
+  # ── 12. NLP ──
+  - code: m12-nlp
+    name: 自然语言处理
+    skeleton_ref: 自然语言处理
+    concepts:
+      - code: c1201
+        name: 分词与词性标注
+        def: 把连续文本切成词并标注语法类别，是中文 NLP 的第一步。
+        misconceptions:
+          - 英文不需要分词
+        prereq: [c0201]
+      - code: c1202
+        name: 词向量
+        def: 把词映射到稠密向量空间，语义相近的向量距离也近（Word2Vec、GloVe）。
+        misconceptions:
+          - 词向量能区分同词不同义
+        prereq: [c1201]
+      - code: c1203
+        name: 预训练语言模型
+        def: 在大规模语料上预训练后微调，BERT 用双向编码、GPT 用自回归解码。
+        misconceptions:
+          - BERT 和 GPT 只是参数量不同
+        prereq: [c1202, c1004]
+
+  # ── 13. 计算机视觉 ──
+  - code: m13-cv
+    name: 计算机视觉
+    skeleton_ref: 计算机视觉
+    concepts:
+      - code: c1301
+        name: 图像分类
+        def: 判断整张图属于哪个类别，CNN 是主流方法。
+        misconceptions:
+          - 分类准确率高就说明模型真的看懂了图
+        prereq: [c0502]
+      - code: c1302
+        name: 目标检测
+        def: 同时定位并识别图中多个目标（YOLO、R-CNN）。
+        misconceptions:
+          - 目标检测就是分类加画框这么简单
+        prereq: [c1301]
+      - code: c1303
+        name: 语义分割
+        def: 为图中每个像素分配类别标签。
+        misconceptions:
+          - 语义分割能区分同类个体（那是实例分割）
+        prereq: [c1301]
+
+  # ── 14. 语音识别 ──
+  - code: m14-speech
+    name: 语音识别
+    skeleton_ref: 语音识别
+    concepts:
+      - code: c1401
+        name: 声学模型与语言模型
+        def: 声学模型判断音素对应关系，语言模型约束输出更符合语言习惯。
+        misconceptions:
+          - 只用声学模型就能识别得准
+        prereq: [c1201]
+      - code: c1402
+        name: 端到端语音识别
+        def: 从音频直接到文本的单一模型（RNN-T、Transformer）。
+        misconceptions:
+          - 端到端不需要任何语言学知识
+        prereq: [c1401, c1002]
+      - code: c1403
+        name: 语音合成 TTS
+        def: 把文本转为自然语音（文本分析→声学特征→波形）。
+        misconceptions:
+          - 语音合成只是拼接录音
+        prereq: [c1401]
+
+  # ── 15. 知识表示 ──
+  - code: m15-knowledge
+    name: 知识表示
+    skeleton_ref: 知识表示
+    concepts:
+      - code: c1501
+        name: 谓词逻辑
+        def: 用谓词、量词和逻辑连接词形式化描述知识（一阶逻辑）。
+        misconceptions:
+          - 谓词逻辑能表达一切知识
+        prereq: [c0104]
+      - code: c1502
+        name: 产生式规则
+        def: IF-THEN 形式的规则，用于专家系统推理。
+        misconceptions:
+          - 规则多就一定推理强（规则冲突需处理）
+        prereq: [c1501]
+      - code: c1503
+        name: 知识图谱
+        def: 用实体-关系-实体的三元组组织知识，可查询可推理。
+        misconceptions:
+          - 知识图谱能自动保证知识是对的
+        prereq: [c1501]
+
+  # ── 16. 自动推理 ──
+  - code: m16-reasoning
+    name: 自动推理
+    skeleton_ref: 自动推理
+    concepts:
+      - code: c1601
+        name: 归结原理
+        def: 把命题化为子句形式，通过消解产生空子句来证明。
+        misconceptions:
+          - 归结原理能证明所有命题（只对一阶逻辑完备）
+        prereq: [c1501]
+      - code: c1602
+        name: 前向与后向链
+        def: 前向链从已知事实推新结论，后向链从目标反推所需条件。
+        misconceptions:
+          - 前向和后向链的结果会不同
+        prereq: [c1502]
+      - code: c1603
+        name: 贝叶斯网络
+        def: 用有向无环图表示变量间条件依赖，做不确定性推理。
+        misconceptions:
+          - 贝叶斯网络能处理因果（它只表达条件独立）
+        prereq: [c1601]
+
+  # ── 17. 搜索算法 ──
+  - code: m17-search
+    name: 搜索算法
+    skeleton_ref: 搜索算法
+    concepts:
+      - code: c1701
+        name: 盲目搜索
+        def: 不利用问题信息的搜索（BFS、DFS、迭代加深）。
+        misconceptions:
+          - BFS 一定优于 DFS
+        prereq: [c0103]
+      - code: c1702
+        name: 启发式搜索与 A*
+        def: A* 用 f=g+h 评估节点，h 可采纳时能保证最优。
+        misconceptions:
+          - 启发函数任意取都能保证最优
+          - A* 比 BFS 慢
+        prereq: [c1701]
+
+  # ── 18. 博弈搜索 ──
+  - code: m18-games
+    name: 博弈搜索
+    skeleton_ref: 博弈搜索
+    concepts:
+      - code: c1801
+        name: Minimax
+        def: 假设双方都走最优，交替取最大最小来选着法。
+        misconceptions:
+          - Minimax 能处理不完美对手
+        prereq: [c1702]
+      - code: c1802
+        name: Alpha-Beta 剪枝
+        def: 在不影响结果的前提下剪掉必然不会被选的分支。
+        misconceptions:
+          - 剪枝会降低结果质量
+        prereq: [c1801]
+      - code: c1803
+        name: 蒙特卡洛树搜索
+        def: 用随机模拟与树搜索结合评估局面（AlphaGo 的基础）。
+        misconceptions:
+          - MCTS 完全随机、不需要策略
+        prereq: [c1801]
+
+  # ── 19. 智能体系统 ──
+  - code: m19-agents
+    name: 智能体系统
+    skeleton_ref: 智能体系统
+    concepts:
+      - code: c1901
+        name: 感知-决策-行动循环
+        def: 智能体不断感知环境、做决策、执行动作，闭环运行。
+        misconceptions:
+          - 智能体只需一次性规划
+        prereq: [c0103]
+      - code: c1902
+        name: 智能体架构三型
+        def: 反应式（直接映射）、认知式（有内部模型）、混合式（分层）。
+        misconceptions:
+          - 认知式一定优于反应式
+        prereq: [c1901]
+      - code: c1903
+        name: 多智能体系统
+        def: 多个智能体通过协作或竞争完成单智能体难以完成的任务。
+        misconceptions:
+          - 智能体越多系统越强
+        prereq: [c1901]
+
+  # ── 20. AI 伦理安全 ──
+  - code: m20-ethics
+    name: AI 伦理安全
+    skeleton_ref: AI伦理安全
+    concepts:
+      - code: c2001
+        name: 算法偏见
+        def: 训练数据中的偏差被模型学到并放大，造成不公平输出。
+        misconceptions:
+          - 数据客观模型就一定公平
+        prereq: [c0201]
+      - code: c2002
+        name: 可解释性
+        def: 能说清模型为什么给出某个输出。
+        misconceptions:
+          - 可解释性和准确率必然冲突（可以权衡）
+        prereq: [c2001]
+      - code: c2003
+        name: AI 对齐
+        def: 让模型的行为符合人类意图与价值观。
+        misconceptions:
+          - 对齐只是让模型说话礼貌
+        prereq: [c1006]
+      - code: c2004
+        name: AI 治理与监管
+        def: 通过法规、标准、审计约束 AI 的开发与使用。
+        misconceptions:
+          - 治理只针对已经出问题的模型
+        prereq: [c2001, c2003]

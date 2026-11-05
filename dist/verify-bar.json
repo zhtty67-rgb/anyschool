@@ -1,0 +1,17 @@
+{
+  "pass": [
+    "横条容器带 data-act=submit=submit",
+    "横条整条是手型光标=pointer",
+    "点最左端能提交=next",
+    "提交后文字变「下一题」=下一题",
+    "点最右端能翻页=1 / 12 -> 2 / 12",
+    "第2题横条回到 submit=submit",
+    "点正中能提交=next",
+    "再次点左端能翻页=2 / 12 -> 3 / 12"
+  ],
+  "fail": [],
+  "notes": [
+    "提交前横条: {\"left\":0,\"right\":1243,\"top\":558,\"bottom\":622,\"cy\":590,\"text\":\"提交\",\"act\":\"submit\",\"cursor\":\"pointer\"}",
+    "左端点提交后横条: {\"left\":0,\"right\":1243,\"top\":558,\"bottom\":622,\"cy\":590,\"text\":\"下一题\",\"act\":\"next\",\"cursor\":\"pointer\"}"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "next": {
+    "rect": {
+      "x": 598,
+      "y": 753,
+      "w": 168,
+      "h": 37
+    },
+    "text": "下一题",
+    "visible": true,
+    "inViewport": true,
+    "topElementAtCenter": {
+      "tag": "BUTTON",
+      "cls": "btn-primary",
+      "isButtonOrChild": true
+    },
+    "computed": {
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "zIndex": "20"
+    },
+    "parentRect": {
+      "y": 740,
+      "h": 62,
+      "pos": "fixed"
+    }
+  },
+  "overlap": [
+    {
+      "y": 100,
+      "tag": "DIV",
+      "cls": "band-main"
+    },
+    {
+      "y": 200,
+      "tag": "DIV",
+      "cls": "band-main"
+    },
+    {
+      "y": 300,
+      "tag": "DIV",
+      "cls": "quiz-head"
+    },
+    {
+      "y": 400,
+      "tag": "SUMMARY",
+      "cls": "brief-title"
+    },
+    {
+      "y": 500,
+      "tag": "DIV",
+      "cls": "hint"
+    },
+    {
+      "y": 600,
+      "tag": "SPAN",
+      "cls": "otext"
+    },
+    {
+      "y": 700,
+      "tag": "BUTTON",
+      "cls": "opt"
+    },
+    {
+      "y": 780,
+      "tag": "BUTTON",
+      "cls": "btn-primary"
+    }
+  ],
+  "onScreenText": {
+    "答对了": {
+      "text": "答对了",
+      "y": 773,
+      "inViewport": true
+    },
+    "答错了": false,
+    "解析": {
+      "text": "解析",
+      "y": 829,
+      "inViewport": false
+    },
+    "下一题": {
+      "text": "下一题",
+      "y": 753,
+      "inViewport": true
+    },
+    "同学": {
+      "text": "同学",
+      "y": 982,
+      "inViewport": false
+    },
+    "提交": false
+  },
+  "scroll": {
+    "y": 0,
+    "docH": 1331,
+    "vh": 802
+  }
+}

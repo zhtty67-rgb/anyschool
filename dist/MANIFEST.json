@@ -1,0 +1,76 @@
+{
+  "built_at": "2026-11-05T13:07:14.395Z",
+  "source_pack": "questions-authoring-v11.jsonl",
+  "source_pack_full": "data/questions-authoring-v11.jsonl",
+  "published": {
+    "version": "v12",
+    "file": "questions-authoring-v11.jsonl",
+    "manifest": "D:\\jiaoyu-release\\anyschool\\published.json",
+    "locked_path_matches": true
+  },
+  "excluded_nodes": {
+    "file": "excluded-nodes.json",
+    "build_version": "v12",
+    "nodes": [
+      "c1103"
+    ],
+    "questions_dropped": 12,
+    "entries": [
+      {
+        "node": "c1103",
+        "name": "变分自编码器（VAE）",
+        "effective_from": "v10",
+        "reason": "核心术语在整条学习路径上前置缺失，外行读不懂题干，不是题没写好而是这个知识点没被讲过",
+        "decided_by": "Chief（依据小白复核：22 道里 11 道判过头，c1103 那 7 道中 6 道确认答不了，全部理由是『术语判断不了对错』）",
+        "decided_at": "2026-11-05"
+      }
+    ],
+    "pending": []
+  },
+  "questions": 531,
+  "by_type": {
+    "single_choice": 411,
+    "judge": 132
+  },
+  "nodes_covered": 45,
+  "nodes_total": 79,
+  "check": {
+    "passed": true,
+    "errors": 0,
+    "warnings": 0,
+    "error_codes": {},
+    "warning_codes": {}
+  },
+  "notices": {
+    "file": "THIRD_PARTY_NOTICES.md",
+    "file_sha256": "f9e21cebc1a2b449",
+    "file_mtime": "2026-11-04T13:16:56.391Z",
+    "verified": [
+      "d2l-zh",
+      "d2l 作者 Aston Zhang",
+      "d2l 作者 Zachary C. Lipton",
+      "d2l 作者 Mu Li",
+      "d2l 作者 Alexander J. Smola",
+      "MMLU",
+      "版权行",
+      "变更声明"
+    ]
+  },
+  "pack_sha256": "e067ed31e3106ccd",
+  "release_notes": [
+    {
+      "id": "c0205-08",
+      "change": "stem_replaced",
+      "from_version": "v8",
+      "to_version": "v9+",
+      "old_stem": "过拟合的模型在训练数据上的准确率一定很高。",
+      "new_stem": "过拟合的模型在训练数据上的表现一定优于它在新数据上的表现。",
+      "assessment_changed": true,
+      "note": "考点由\"训练准确率\"改为\"训练集与新数据对比\"。v8 的作答记录不继承——两者不是同一道题。"
+    }
+  ],
+  "files": [
+    "index.html",
+    "THIRD_PARTY_NOTICES.md"
+  ]
+}

@@ -1,0 +1,13 @@
+import { readFileSync } from 'node:fs';
+const h = readFileSync('data', 'utf8');
+const snap = JSON.parse(h.match(/window\.__SNAP__ = (\{[\s\S]*?\});<\/script>/)[1]);
+const all = snap.tree.modules.flatMap((m) => m.concepts);
+const withQ = all.filter((c) => c.questionCount > 0);
+const without = all.filter((c) => c.questionCount === 0);
+console.log(`概念树总节点: ${all.length}`);
+console.log(`有题: ${withQ.length}`);
+console.log(`无题: ${without.length}`);
+const briefs = snap.briefs || {};
+const hasAsks = without.filter((c) => briefs[c.code] && briefs[c.code].asks);
+console.log(`无题但已有 asks 的（等合并后就能上）: ${hasAsks.length}`);
+console.log('  ' + hasAsks.map((c) => c.code + ' ' + c.name).join('\n  '));

@@ -1,0 +1,272 @@
+[
+  {
+    "step": "第1题 提交前",
+    "count": "1 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "下列关于人工智能的说法，最准确的是："
+  },
+  {
+    "step": "第1题 提交后",
+    "count": "1 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "下列关于人工智能的说法，最准确的是："
+  },
+  {
+    "step": "第1题 点下一题后",
+    "count": "2 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "判断某台机器是否属于人工智能，最关键的依据是："
+  },
+  {
+    "step": "第2题 提交前",
+    "count": "2 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "判断某台机器是否属于人工智能，最关键的依据是："
+  },
+  {
+    "step": "第2题 提交后",
+    "count": "2 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "判断某台机器是否属于人工智能，最关键的依据是："
+  },
+  {
+    "step": "第2题 点下一题后",
+    "count": "3 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "人工智能和机器学习的关系是："
+  },
+  {
+    "step": "第3题 提交前",
+    "count": "3 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "人工智能和机器学习的关系是："
+  },
+  {
+    "step": "第3题 提交后",
+    "count": "3 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "人工智能和机器学习的关系是："
+  },
+  {
+    "step": "第3题 点下一题后",
+    "count": "4 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "下面哪一项最不适合算作人工智能的应用？"
+  },
+  {
+    "step": "第4题 提交前",
+    "count": "4 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "下面哪一项最不适合算作人工智能的应用？"
+  },
+  {
+    "step": "第4题 提交后",
+    "count": "4 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "下面哪一项最不适合算作人工智能的应用？"
+  },
+  {
+    "step": "第4题 点下一题后",
+    "count": "5 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "1956 年达特茅斯会议上，人工智能正式成为一门学科。这次会"
+  },
+  {
+    "step": "第5题 提交前",
+    "count": "5 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "1956 年达特茅斯会议上，人工智能正式成为一门学科。这次会"
+  },
+  {
+    "step": "第5题 提交后",
+    "count": "5 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "1956 年达特茅斯会议上，人工智能正式成为一门学科。这次会"
+  },
+  {
+    "step": "第5题 点下一题后",
+    "count": "6 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "有人说「只要机器表现得像个聪明人，它就是人工智能」。这个说法"
+  },
+  {
+    "step": "第6题 提交前",
+    "count": "6 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "有人说「只要机器表现得像个聪明人，它就是人工智能」。这个说法"
+  },
+  {
+    "step": "第6题 提交后",
+    "count": "6 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "有人说「只要机器表现得像个聪明人，它就是人工智能」。这个说法"
+  },
+  {
+    "step": "第6题 点下一题后",
+    "count": "7 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "「强人工智能」和「弱人工智能」的区别是："
+  },
+  {
+    "step": "第7题 提交前",
+    "count": "7 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "「强人工智能」和「弱人工智能」的区别是："
+  },
+  {
+    "step": "第7题 提交后",
+    "count": "7 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "「强人工智能」和「弱人工智能」的区别是："
+  },
+  {
+    "step": "第7题 点下一题后",
+    "count": "8 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "以下哪个场景最能体现「机器完成了需要人类智能的任务」？"
+  },
+  {
+    "step": "第8题 提交前",
+    "count": "8 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "以下哪个场景最能体现「机器完成了需要人类智能的任务」？"
+  },
+  {
+    "step": "第8题 提交后",
+    "count": "8 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "以下哪个场景最能体现「机器完成了需要人类智能的任务」？"
+  },
+  {
+    "step": "第8题 点下一题后",
+    "count": "9 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "人工智能系统「智能」的来源，在今天最典型的做法是："
+  },
+  {
+    "step": "第9题 提交前",
+    "count": "9 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "人工智能系统「智能」的来源，在今天最典型的做法是："
+  },
+  {
+    "step": "第9题 提交后",
+    "count": "9 / 12",
+    "opts": 4,
+    "submit": false,
+    "next": true,
+    "barBtn": "",
+    "feedback": true,
+    "stem": "人工智能系统「智能」的来源，在今天最典型的做法是："
+  },
+  {
+    "step": "第9题 点下一题后",
+    "count": "10 / 12",
+    "opts": 4,
+    "submit": true,
+    "next": false,
+    "barBtn": "",
+    "feedback": false,
+    "stem": "关于人工智能，下列说法正确的是："
+  }
+]

@@ -1,0 +1,620 @@
+{
+ "meta": {
+  "purpose": "节点详情：定义、常见误解、这个节点在考什么",
+  "note": "不动 node-details-v1.json；asks 是给新手的一句话钩子，由 Qbank 撰写",
+  "generated_at": "2026-11-05",
+  "node_count": 32
+ },
+ "nodes": [
+  {
+   "code": "c0101",
+   "name": "人工智能定义",
+   "module": "m01-ai-overview",
+   "module_name": "AI 概述",
+   "def": "研究如何让机器完成需要人类智能的任务。",
+   "misconceptions": [
+    "人工智能等于会说话的机器人",
+    "人工智能等于机器学习"
+   ],
+   "prereq": [],
+   "question_count": 12,
+   "asks": "一个系统到底算不算人工智能，该怎么划这条线",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-authoring-stage12-v1"
+   ]
+  },
+  {
+   "code": "c0102",
+   "name": "图灵测试",
+   "module": "m01-ai-overview",
+   "module_name": "AI 概述",
+   "def": "通过对话无法分辨对方是人还是机器，即判定具备智能。",
+   "misconceptions": [
+    "图灵测试能测出机器的真实理解能力"
+   ],
+   "prereq": [
+    "c0101"
+   ],
+   "question_count": 12,
+   "asks": "机器能聊得像人，是否就说明它真懂了",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-authoring-stage12-v1"
+   ]
+  },
+  {
+   "code": "c0103",
+   "name": "智能体概念",
+   "module": "m01-ai-overview",
+   "module_name": "AI 概述",
+   "def": "能感知环境并采取行动以达成目标的系统。",
+   "misconceptions": [
+    "智能体必须有实体机器人"
+   ],
+   "prereq": [
+    "c0101"
+   ],
+   "question_count": 12,
+   "asks": "什么样的系统能自己看、自己做、自己判断达成没达成",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-authoring-stage12-v1"
+   ]
+  },
+  {
+   "code": "c0104",
+   "name": "AI 三大流派",
+   "module": "m01-ai-overview",
+   "module_name": "AI 概述",
+   "def": "符号主义（逻辑推理）、联结主义（神经网络）、行为主义（感知-动作）。",
+   "misconceptions": [
+    "三大流派是先后替代关系，新的淘汰旧的"
+   ],
+   "prereq": [
+    "c0101"
+   ],
+   "question_count": 12,
+   "asks": "逻辑推理、神经网络、感知行动三条路，谁替代了谁",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-authoring-stage12-v1"
+   ]
+  },
+  {
+   "code": "c0201",
+   "name": "机器学习定义",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "让程序从数据中自动发现规律，而不是人把规则写死。",
+   "misconceptions": [
+    "机器学习就是数据库查询",
+    "机器学习需要人写全部规则"
+   ],
+   "prereq": [
+    "c0101"
+   ],
+   "question_count": 12,
+   "asks": "机器从数据里学出来的规律，和人手写的规则差在哪",
+   "source": [
+    "questions-ai-m02-fill-v1",
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m02-v1"
+   ]
+  },
+  {
+   "code": "c0202",
+   "name": "监督学习",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "用带标签的数据学习输入到输出的映射。",
+   "misconceptions": [
+    "有输入输出就是监督学习"
+   ],
+   "prereq": [
+    "c0201"
+   ],
+   "question_count": 12,
+   "asks": "给了标准答案的训练数据，机器到底在学什么",
+   "source": [
+    "questions-ai-m02-fill-v1",
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m02-v1"
+   ]
+  },
+  {
+   "code": "c0203",
+   "name": "无监督学习",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "用无标签数据发现数据内部结构。",
+   "misconceptions": [
+    "无监督学习没有用，因为不知道对错"
+   ],
+   "prereq": [
+    "c0201"
+   ],
+   "question_count": 12,
+   "asks": "没有标准答案的数据，机器能从中看出什么",
+   "source": [
+    "questions-ai-m02-fill-v1",
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m02-v1"
+   ]
+  },
+  {
+   "code": "c0204",
+   "name": "训练集与测试集",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "用训练集学参数，用测试集评估泛化，两者不能混用。",
+   "misconceptions": [
+    "在测试集上调参没关系",
+    "数据集越大越不需要划分"
+   ],
+   "prereq": [
+    "c0201"
+   ],
+   "question_count": 12,
+   "asks": "为什么不能拿考过的题来估自己的能力",
+   "source": [
+    "questions-ai-m02-fill-v1",
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m02-v1"
+   ]
+  },
+  {
+   "code": "c0205",
+   "name": "过拟合",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "模型在训练集表现好、在新数据上表现差。",
+   "misconceptions": [
+    "训练准确率高就是好模型",
+    "过拟合等于模型太复杂（只是原因之一）"
+   ],
+   "prereq": [
+    "c0204"
+   ],
+   "question_count": 12,
+   "asks": "训练时考 99 分、换套题只考 61 分，这是怎么了",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-authoring-stage12-v1"
+   ]
+  },
+  {
+   "code": "c0206",
+   "name": "泛化能力",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "模型在未见过的数据上表现好的能力。",
+   "misconceptions": [
+    "泛化能力可以从训练集看出来"
+   ],
+   "prereq": [
+    "c0205"
+   ],
+   "question_count": 12,
+   "asks": "模型碰到没见过的情况还行不行，怎么判断",
+   "source": [
+    "questions-ai-m02-fill-v1",
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m02-v1"
+   ]
+  },
+  {
+   "code": "c0207",
+   "name": "偏差与方差",
+   "module": "m02-ml-basics",
+   "module_name": "机器学习基础",
+   "def": "偏差是模型假设偏离真实规律，方差是模型对数据扰动敏感；二者需权衡。",
+   "misconceptions": [
+    "偏差和方差可以同时降到零"
+   ],
+   "prereq": [
+    "c0205",
+    "c0206"
+   ],
+   "question_count": 12,
+   "asks": "模型错得系统性，和模型太敏感，是两回事",
+   "source": [
+    "questions-ai-m02-fill-v1",
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m02-v1"
+   ]
+  },
+  {
+   "code": "c0301",
+   "name": "线性回归",
+   "module": "m03-linear-models",
+   "module_name": "线性模型",
+   "def": "用一条直线（超平面）拟合输入与连续输出的关系。",
+   "misconceptions": [
+    "线性回归只能处理一个变量"
+   ],
+   "prereq": [
+    "c0202"
+   ],
+   "question_count": 12,
+   "asks": "结果和输入大致成正比时，怎么画一条最好的线",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m03-v1"
+   ]
+  },
+  {
+   "code": "c0302",
+   "name": "最小二乘法",
+   "module": "m03-linear-models",
+   "module_name": "线性模型",
+   "def": "让预测值与真实值残差平方和最小的参数估计方法。",
+   "misconceptions": [
+    "最小二乘对所有误差类型都合适"
+   ],
+   "prereq": [
+    "c0301"
+   ],
+   "question_count": 12,
+   "asks": "一条线画得好不好，用什么算分",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m03-v1"
+   ]
+  },
+  {
+   "code": "c0303",
+   "name": "逻辑回归",
+   "module": "m03-linear-models",
+   "module_name": "线性模型",
+   "def": "用 sigmoid 把线性输出压到 0-1，做二分类。",
+   "misconceptions": [
+    "逻辑回归是用来做回归的",
+    "逻辑回归输出的是类别而不是概率"
+   ],
+   "prereq": [
+    "c0301"
+   ],
+   "question_count": 12,
+   "asks": "名字里带回归，却是用来分类的",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m03-v1"
+   ]
+  },
+  {
+   "code": "c0304",
+   "name": "梯度下降",
+   "module": "m03-linear-models",
+   "module_name": "线性模型",
+   "def": "沿损失函数梯度反方向迭代更新参数，逐步降低损失。",
+   "misconceptions": [
+    "梯度下降一定能找到全局最优",
+    "学习率越大收敛越快"
+   ],
+   "prereq": [
+    "c0302"
+   ],
+   "question_count": 12,
+   "asks": "看不见谷底的时候，怎么一步步往下走",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m03-v1"
+   ]
+  },
+  {
+   "code": "c0305",
+   "name": "特征工程",
+   "module": "m03-linear-models",
+   "module_name": "线性模型",
+   "def": "人工构造、筛选、变换特征以提升模型效果。",
+   "misconceptions": [
+    "深度学习时代特征工程没用了"
+   ],
+   "prereq": [
+    "c0301"
+   ],
+   "question_count": 12,
+   "asks": "留给模型的数据该长什么样，才更容易学",
+   "source": [
+    "questions-ai-m02-m03-fill-v1",
+    "questions-ai-m03-v1"
+   ]
+  },
+  {
+   "code": "c0401",
+   "name": "感知机",
+   "module": "m04-neural-networks",
+   "module_name": "神经网络",
+   "def": "最早的线性分类器，输入加权求和后过阈值输出。",
+   "misconceptions": [
+    "感知机能解决异或问题"
+   ],
+   "prereq": [
+    "c0303"
+   ],
+   "question_count": 12,
+   "asks": "一个只有一层的东西，能分什么、不能分什么",
+   "source": [
+    "questions-ai-m04-v1"
+   ]
+  },
+  {
+   "code": "c0402",
+   "name": "多层感知机 MLP",
+   "module": "m04-neural-networks",
+   "module_name": "神经网络",
+   "def": "多层感知机由输入层、隐藏层、输出层堆叠而成，能拟合非线性关系。",
+   "misconceptions": [
+    "层数越多效果一定越好"
+   ],
+   "prereq": [
+    "c0401"
+   ],
+   "question_count": 11,
+   "asks": "层数加上去之后，多出来的能力从哪来",
+   "source": [
+    "questions-ai-m04-v1"
+   ]
+  },
+  {
+   "code": "c0403",
+   "name": "激活函数",
+   "module": "m04-neural-networks",
+   "module_name": "神经网络",
+   "def": "给神经元引入非线性，常见 ReLU、sigmoid。",
+   "misconceptions": [
+    "激活函数可有可无",
+    "所有激活函数效果一样"
+   ],
+   "prereq": [
+    "c0402"
+   ],
+   "question_count": 12,
+   "asks": "给神经元加一道转换，为什么非加不可",
+   "source": [
+    "questions-ai-m04-v1"
+   ]
+  },
+  {
+   "code": "c0404",
+   "name": "损失函数",
+   "module": "m04-neural-networks",
+   "module_name": "神经网络",
+   "def": "衡量预测与真实差距的标量函数，训练的目标就是最小化它。",
+   "misconceptions": [
+    "损失函数越小说明模型越好（还要看泛化）"
+   ],
+   "prereq": [
+    "c0402"
+   ],
+   "question_count": 12,
+   "asks": "怎么用一个数说清「这次错得有多离谱」",
+   "source": [
+    "questions-ai-m04-v1"
+   ]
+  },
+  {
+   "code": "c0405",
+   "name": "反向传播",
+   "module": "m04-neural-networks",
+   "module_name": "神经网络",
+   "def": "用链式法则从输出层往回算每个参数的梯度。",
+   "misconceptions": [
+    "反向传播是一种优化算法（它只算梯度）",
+    "反向传播保证收敛"
+   ],
+   "prereq": [
+    "c0404",
+    "c0304"
+   ],
+   "question_count": 12,
+   "asks": "判错之后，怎么知道每一层各自该改多少",
+   "source": [
+    "questions-ai-m04-v1"
+   ]
+  },
+  {
+   "code": "c0501",
+   "name": "深度学习定义",
+   "module": "m05-deep-learning",
+   "module_name": "深度学习",
+   "def": "用多层神经网络自动学习分层特征表示的机器学习分支。",
+   "misconceptions": [
+    "深度学习就是神经网络换个名字"
+   ],
+   "prereq": [
+    "c0402"
+   ],
+   "question_count": 13,
+   "asks": "为什么多层网络和「只是叫法不同」不是一回事",
+   "source": [
+    "questions-ai-m04-v1",
+    "questions-ai-m05-v1"
+   ]
+  },
+  {
+   "code": "c0502",
+   "name": "CNN 卷积网络",
+   "module": "m05-deep-learning",
+   "module_name": "深度学习",
+   "def": "用卷积核在图像上滑动提取局部特征，权重共享大幅减少参数。",
+   "misconceptions": [
+    "卷积核是随机生成的",
+    "CNN 只能用于图像"
+   ],
+   "prereq": [
+    "c0501"
+   ],
+   "question_count": 12,
+   "asks": "图像上滑动的小窗口，为什么比全连接省那么多参数",
+   "source": [
+    "questions-ai-m05-v1"
+   ]
+  },
+  {
+   "code": "c0503",
+   "name": "RNN 与 LSTM",
+   "module": "m05-deep-learning",
+   "module_name": "深度学习",
+   "def": "带循环连接的序列模型；LSTM 用门控缓解长依赖遗忘。",
+   "misconceptions": [
+    "RNN 能完美记住任意长序列"
+   ],
+   "prereq": [
+    "c0501"
+   ],
+   "question_count": 12,
+   "asks": "一句话读到后面，怎么还记得前面说了什么",
+   "source": [
+    "questions-ai-m05-v1"
+   ]
+  },
+  {
+   "code": "c0504",
+   "name": "Dropout 正则化",
+   "module": "m05-deep-learning",
+   "module_name": "深度学习",
+   "def": "训练时随机丢弃部分神经元，抑制过拟合。",
+   "misconceptions": [
+    "Dropout 在推理时也要开启"
+   ],
+   "prereq": [
+    "c0205",
+    "c0501"
+   ],
+   "question_count": 12,
+   "asks": "训练时故意关掉一部分神经元，为什么反而更稳",
+   "source": [
+    "questions-ai-m05-v1"
+   ]
+  },
+  {
+   "code": "c0505",
+   "name": "批归一化",
+   "module": "m05-deep-learning",
+   "module_name": "深度学习",
+   "def": "对每层输入做归一化，加速训练并稳定收敛。",
+   "misconceptions": [
+    "批归一化等同于数据标准化（作用位置不同）"
+   ],
+   "prereq": [
+    "c0501"
+   ],
+   "question_count": 12,
+   "asks": "每一层的输入尺度忽大忽小，会出什么问题",
+   "source": [
+    "questions-ai-m05-v1"
+   ]
+  },
+  {
+   "code": "c0601",
+   "name": "最大间隔超平面",
+   "module": "m06-svm",
+   "module_name": "支持向量机",
+   "def": "在能分开两类样本的超平面中，选间隔最大的那个。",
+   "misconceptions": [
+    "任意一个能分开的超平面都一样好"
+   ],
+   "prereq": [
+    "c0303"
+   ],
+   "question_count": 12,
+   "asks": "两类点分得开的时候，哪条分界线才是最好的",
+   "source": [
+    "authored-m06-m07"
+   ]
+  },
+  {
+   "code": "c0602",
+   "name": "核技巧",
+   "module": "m06-svm",
+   "module_name": "支持向量机",
+   "def": "用核函数隐式计算高维内积，把线性不可分变成可分。",
+   "misconceptions": [
+    "核函数真的把数据映射到高维再计算"
+   ],
+   "prereq": [
+    "c0601"
+   ],
+   "question_count": 12,
+   "asks": "画不出曲线的情况下，怎么让分界线弯起来",
+   "source": [
+    "authored-m06-m07"
+   ]
+  },
+  {
+   "code": "c0603",
+   "name": "软间隔",
+   "module": "m06-svm",
+   "module_name": "支持向量机",
+   "def": "允许少量样本违反间隔约束，换取更好的泛化。",
+   "misconceptions": [
+    "SVM 必须完美分开所有样本"
+   ],
+   "prereq": [
+    "c0601",
+    "c0205"
+   ],
+   "question_count": 12,
+   "asks": "数据里混了标错的样本，还要不要坚持全分对",
+   "source": [
+    "authored-m06-m07"
+   ]
+  },
+  {
+   "code": "c0701",
+   "name": "决策树",
+   "module": "m07-trees-ensembles",
+   "module_name": "决策树集成",
+   "def": "按特征逐层划分样本的树形模型，可解释性强。",
+   "misconceptions": [
+    "决策树越深越准"
+   ],
+   "prereq": [
+    "c0202"
+   ],
+   "question_count": 12,
+   "asks": "一层层问问题把样本分开，为什么会越问越不准",
+   "source": [
+    "authored-m06-m07"
+   ]
+  },
+  {
+   "code": "c0702",
+   "name": "信息增益与基尼系数",
+   "module": "m07-trees-ensembles",
+   "module_name": "决策树集成",
+   "def": "衡量一次划分让数据纯度提升了多少，决定树怎么长。",
+   "misconceptions": [
+    "信息增益和基尼系数结果一定不同"
+   ],
+   "prereq": [
+    "c0701"
+   ],
+   "question_count": 12,
+   "asks": "切一刀之前，怎么判断这一刀值不值得切",
+   "source": [
+    "authored-m06-m07"
+   ]
+  },
+  {
+   "code": "c0903",
+   "name": "Q-learning",
+   "module": "m09-rl",
+   "module_name": "强化学习",
+   "def": "学习状态-动作价值函数 Q(s,a)，据此选动作。",
+   "misconceptions": [
+    "Q-learning 需要知道环境模型"
+   ],
+   "prereq": [
+    "c0902"
+   ],
+   "question_count": 10,
+   "asks": "不知道未来会怎样时，怎么估算每个动作值不值得做",
+   "source": [
+    "questions-ai-m09-sample-v1"
+   ]
+  }
+ ]
+}

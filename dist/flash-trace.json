@@ -1,0 +1,121 @@
+{
+  "samples": [
+    {
+      "ms": 120,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 240,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 360,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 480,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 600,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 720,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 840,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 960,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 1080,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    },
+    {
+      "ms": 1200,
+      "feedback": true,
+      "next": true,
+      "submit": false,
+      "explain": true,
+      "peer": true,
+      "count": "1 / 12",
+      "optClass": "opt",
+      "selCount": 0
+    }
+  ],
+  "paints": [
+    {
+      "t": 1793821775339,
+      "n": 1,
+      "childList": 1
+    }
+  ]
+}

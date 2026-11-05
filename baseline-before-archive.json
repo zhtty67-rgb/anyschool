@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-04T14:29:45.845Z",
+  "published": {
+    "version": "v8",
+    "file": "questions-authoring-v8.jsonl",
+    "path": "data\\questions-authoring-v8.jsonl"
+  },
+  "loaded": {
+    "path": "data\\questions-authoring-v8.jsonl",
+    "total": 262,
+    "sha256": "def054f339aa5766bbab95ca21ee2dca222c2a432cb1f425b8a7047fe93fc347"
+  },
+  "check": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 262
+  },
+  "dist": {
+    "sha256": "acb25d06d9d76ff225a55960f812d3750031a99dcb3eb3100599e97ca8503352",
+    "size": 395409
+  }
+}

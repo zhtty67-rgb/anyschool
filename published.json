@@ -1,0 +1,13 @@
+{
+  "_comment": "线上发布版锁定文件。改这一份，构建和所有脚本就跟着走。",
+  "_rule": "只有显式改动本文件才会切换发布版；脚本不再按文件名自动选最新。",
+  "version": "v12",
+  "file": "questions-authoring-v11.jsonl",
+  "path": "data/questions-authoring-v11.jsonl",
+  "questions": 543,
+  "questions_shipped": 531,
+  "nodes_covered": 45,
+  "nodes_total": 79,
+  "updated_at": "2026-11-05T19:05:00+08:00",
+  "note": "v12 上线。题包仍是 v11（543 题 / 实发 531 / 45 节点），题目构成一个没动——v12 改的是界面：①关系图真正渲染出来（paint() 的 innerHTML 以前把静态写入的 #map 整块覆盖掉了）②掌握度分母统一为 45③节点详情能展开看到证据链（basis.attempts 事件 id、excluded 排除理由、formula 参数）④起点框能说明为什么从这里开始。回退到 v11 只需把 version 改回 v11，题包 file 不变。"
+}

@@ -1,0 +1,34 @@
+{
+  "mainChildren": 7,
+  "comingIndex": 6,
+  "isLast": true,
+  "afterCount": 0,
+  "childrenKinds": [
+    "SECTION.module",
+    "SECTION.module",
+    "SECTION.module",
+    "SECTION.module",
+    "SECTION.module",
+    "SECTION.module",
+    "DETAILS.coming"
+  ],
+  "comingTop": 1298,
+  "pageHeight": 1445,
+  "before": [
+    {
+      "tag": "SECTION",
+      "cls": "module",
+      "title": "神经网络"
+    },
+    {
+      "tag": "SECTION",
+      "cls": "module",
+      "title": "深度学习"
+    },
+    {
+      "tag": "SECTION",
+      "cls": "module",
+      "title": "强化学习"
+    }
+  ]
+}
