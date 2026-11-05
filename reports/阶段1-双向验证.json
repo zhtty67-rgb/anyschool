@@ -1,0 +1,40 @@
+{
+  "at": "2026-11-05T10:36:07.766Z",
+  "results": [
+    {
+      "name": "产物 summary.total === 45（不是 79）",
+      "pass": true,
+      "detail": "build exit=0，total=45"
+    },
+    {
+      "name": "改 DECAY=0.5 后重建，产物里的 DECAY 从 0.78 变成 0.5",
+      "pass": true,
+      "detail": "改前 var MIN_SAMPLES=3, WINDOW=5, DECAY=0.78  →  改后 var MIN_SAMPLES=3, WINDOW=5, DECAY=0.5"
+    },
+    {
+      "name": "改 DECAY 后构建仍然成功（说明是重新生成，不是硬编码）",
+      "pass": true,
+      "detail": "exit=0"
+    },
+    {
+      "name": "还原真源后重建，DECAY 回到 0.78",
+      "pass": true,
+      "detail": "var MIN_SAMPLES=3, WINDOW=5, DECAY=0.78"
+    },
+    {
+      "name": "引用一个不存在的函数名 → 构建失败",
+      "pass": true,
+      "detail": "exit=1；输出含报错：true"
+    },
+    {
+      "name": "树里有无题节点（否则这条断言没有意义）",
+      "pass": true,
+      "detail": "无题节点 34 个，如 c1001,c1002,c1003,c1004,c1005"
+    },
+    {
+      "name": "分母 = 有题节点数，不等于树的总节点数",
+      "pass": true,
+      "detail": "total=45，有题=45，树=79"
+    }
+  ]
+}

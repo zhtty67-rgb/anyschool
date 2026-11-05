@@ -1,0 +1,41 @@
+{
+  "at": "2026-11-04T23:41:41.496Z",
+  "dist": "data",
+  "results": [
+    {
+      "name": "做完 3 道，记录数 = 3",
+      "pass": true,
+      "detail": "刷新前 3"
+    },
+    {
+      "name": "刷新后那 3 道还在",
+      "pass": true,
+      "detail": "刷新后 3"
+    },
+    {
+      "name": "两次刷新 summary 一致",
+      "pass": true,
+      "detail": "{\"total\":79,\"unknown\":79,\"weak\":0,\"learning\":0,\"mastered\":0,\"mean\":null} / {\"total\":79,\"unknown\":79,\"weak\":0,\"learning\":0,\"mastered\":0,\"mean\":null}"
+    },
+    {
+      "name": "已掌握数刷新后不减",
+      "pass": true,
+      "detail": "前 0 后 0"
+    },
+    {
+      "name": "同一题做两次有 2 条记录（不是覆盖）",
+      "pass": true,
+      "detail": "c0101-01 共 2 条"
+    },
+    {
+      "name": "清空后记录数 = 0",
+      "pass": true,
+      "detail": "实际 0"
+    },
+    {
+      "name": "清空后 summary 回到全 unknown",
+      "pass": true,
+      "detail": "unknown 79 / total 79"
+    }
+  ]
+}
